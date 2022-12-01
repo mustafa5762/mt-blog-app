@@ -7,22 +7,22 @@
 
 /* variables */
 
-/* :root {
-  --primary-text: #f3f4f6;
-  --secondary-text: #9ca3af;
-  --icon-color: #6b7280;
-  --border: #374151;
+ :root {
+  --primary-text: #fafafa;
+  --secondary-text: #d4d4d4;
+  --icon-color: #737373;
+  --border: #262626;
   --white: #ffffff;
   --primary: #14b8a6;
-} */
-:root {
-  --primary-text: #111827;
-  --secondary-text: #4b5563;
+} 
+/* :root {
+  --primary-text: #0f172a;
+  --secondary-text: #475569;
   --icon-color: #64748b;
   --border: #e2e8f0;
   --white: #ffffff;
   --primary: #14b8a6;
-} 
+} */
 
 
 /* font imports */
@@ -106,7 +106,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-family: 'Sohne';
-  background-color: #f9fafb;
+  background-color: #171717;
 }
 .blur {
   opacity: 0.4;
@@ -114,7 +114,6 @@ body {
 h2 {
   color: var(--primary-text);
   font-weight: 600;
-  font-size: 24px;
 }
 .whwh {
   width: 24px;
@@ -147,7 +146,6 @@ article p {
   font-weight: 400;
   margin-top: 7px;
   margin-bottom: 25px;
-  letter-spacing: 0.1px;
 }
 article iframe {
   width: 100%;
@@ -166,6 +164,7 @@ article h1 {
   font-size: 32px;
   line-height: 40px;
   margin: 10px 0px;
+  letter-spacing: -0.2px;
 }
 
 .title {
@@ -175,6 +174,7 @@ article h1 {
   line-height: 40px;
   margin-top: 0px;
   margin-bottom: 7px;
+  letter-spacing: -0.2px;
 }
 .Short {
   font-weight: 400;
@@ -182,6 +182,7 @@ article h1 {
   font-size: 22px;
   line-height: 30px;
   color: var(--secondary-text);
+  letter-spacing: -0.2px;
 }
 .Blogpost a {
   color: var(--primary);
@@ -352,23 +353,22 @@ article h1 {
   font-size: 15px;
   margin-left: 7px;
   margin-right: 5px;
-  letter-spacing: 0.3px;
 }
 .Comments {
   width: 80%;
   max-width: 400px;
   height: 100vh;
-  background-color: #fff;
+  background-color: #171717;
   padding: 0px 30px;
   position: fixed;
   top: 0;
   right: 0;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-left: 1px solid var(--border);
   overflow-y: auto;
 }
 .post-comment {
   padding: 15px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border: 1px solid var(--border);
   border-radius: 10px;
 }
 .wc-mid textarea {
@@ -379,7 +379,7 @@ article h1 {
   border: none;
   outline: none;
   color: var(--secondary-text);
-  letter-spacing: 0.3px;
+  background-color: transparent;
 }
 .wc-bottom {
   display: flex;
@@ -398,8 +398,8 @@ article h1 {
   align-items: center;
 }
 .c-img img {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border-radius: 90%;
 }
 .c-info {
@@ -408,50 +408,47 @@ article h1 {
 .c-username {
   font-size: 14px;
   color: var(--secondary-text);
-  letter-spacing: 0.3px;
   text-transform: capitalize;
 }
 .c-date {
   font-size: 12px;
   color: var(--icon-color);
-  letter-spacing: 0.3px;
   margin-top: 3px;
 }
 .c-mid {
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 15px;
-  line-height: 25px;
+  line-height: 23px;
   color: var(--secondary-text);
-  letter-spacing: 0.3px;
 }
 .comment-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .cb-left {
   display: flex;
-  gap: 15px;
+  gap: 18px;
 }
 .cb-icon {
   display: flex;
   align-items: center;
 }
 .cb-icon span svg {
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
   color: var(--icon-color);
 }
 .cb-icon span {
   font-size: 14px;
-  color: var(--icon-color);
+  color: var(--secondary-text);
   display: flex;
   align-items: center;
   letter-spacing: 0.3px;
 }
 .reply {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--secondary-text);
 }
 
