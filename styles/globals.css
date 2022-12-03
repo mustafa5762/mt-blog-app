@@ -16,10 +16,10 @@
   --primary: #14b8a6;
 } 
 :root {
-  --primary-text: #171717;
-  --secondary-text: #52525b;
-  --icon-color: #71717a;
-  --border: #e5e5e5;
+  --primary-text: #0f172a;
+  --secondary-text: #334155;
+  --icon-color: #64748b;
+  --border: #e2e8f0;
   --white: #ffffff;
   --primary: #14b8a6;
 }
@@ -106,6 +106,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-family: 'Sohne';
+  background-color: #f8fafc;
 }
 .blur {
   opacity: 0.1;
