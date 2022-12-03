@@ -15,14 +15,14 @@
   --white: #ffffff;
   --primary: #14b8a6;
 } 
-/* :root {
-  --primary-text: #0f172a;
-  --secondary-text: #475569;
-  --icon-color: #64748b;
-  --border: #e2e8f0;
+:root {
+  --primary-text: #171717;
+  --secondary-text: #52525b;
+  --icon-color: #71717a;
+  --border: #e5e5e5;
   --white: #ffffff;
   --primary: #14b8a6;
-} */
+}
 
 
 /* font imports */
@@ -106,10 +106,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-family: 'Sohne';
-  background-color: #171717;
 }
 .blur {
-  opacity: 0.4;
+  opacity: 0.1;
 }
 h2 {
   color: var(--primary-text);
@@ -146,6 +145,7 @@ article p {
   font-weight: 400;
   margin-top: 7px;
   margin-bottom: 25px;
+  letter-spacing: 0.2px;
 }
 article iframe {
   width: 100%;
@@ -182,7 +182,6 @@ article h1 {
   font-size: 22px;
   line-height: 30px;
   color: var(--secondary-text);
-  letter-spacing: -0.2px;
 }
 .Blogpost a {
   color: var(--primary);
@@ -281,7 +280,7 @@ article h1 {
   font-size: 15px;
 }
 .Sidebar-Left {
-  width: 300px;
+  width: 15vw;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -358,7 +357,7 @@ article h1 {
   width: 80%;
   max-width: 400px;
   height: 100vh;
-  background-color: #171717;
+  background-color: #fff;
   padding: 0px 30px;
   position: fixed;
   top: 0;
@@ -451,6 +450,12 @@ article h1 {
   font-size: 14px;
   color: var(--secondary-text);
 }
+.replies {
+  margin: 15px 0 15px 15px;
+  border-left: 3px solid var(--border);
+  padding: 15px;
+  border-radius: 5px;
+}
 
 
 @media (max-width: 481px) {
@@ -470,13 +475,6 @@ article h1 {
   article h1 {
     font-size: 27px;
     line-height: 32px;
-  }
-  .username {
-    font-size: 13px;
-  }
-  .Avatar img {
-    width: 24px;
-    height: 24px;
   }
   .Search-bar {
     display: none;

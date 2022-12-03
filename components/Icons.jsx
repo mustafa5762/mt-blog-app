@@ -1,23 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import {BsShare,BsBookmarkPlus,BsChatLeft,BsHeart,BsHeartFill} from 'react-icons/bs'
+import React, { useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../utils/firebase';
 import axios from 'axios'
 import {motion} from 'framer-motion'
 
-function Icons({id, openit}) {
+function Icons({id, openit, likess}) {
 
-    const [likes, setlikes] = useState(null)
+    const [likes, setlikes] = useState(likess)
     const [user, loading] = useAuthState(auth);
-
-    const getLikes = async () => {
-        const res = await axios.get('https://ecomm-backend2.herokuapp.com/api/blogslikes/' + id)
-        setlikes(res.data)
-    }
-
-    useEffect(() => {
-      getLikes()
-    },[])
     
 
     const Like = async () => {
@@ -28,7 +18,7 @@ function Icons({id, openit}) {
                     user: user.email
                 };
                 setlikes([...likes, user.email])
-                await axios.post('https://ecomm-backend2.herokuapp.com/api/blogl/', data)
+                await axios.post('https://sore-cyan-twill.cyclic.app/api/blogl/', data)
             } catch (error) {
                 console.log(error)
             }
@@ -46,7 +36,7 @@ function Icons({id, openit}) {
                    user: user.email
                };
                setlikes(likes.filter((like) => like !== user.email ))
-               await axios.post('https://ecomm-backend2.herokuapp.com/api/blogul/', data)
+               await axios.post('https://sore-cyan-twill.cyclic.app/api/blogul/', data)
            } catch (error) {
                console.log(error)
            }

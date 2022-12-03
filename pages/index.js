@@ -15,7 +15,7 @@ export default function Home({ blogg }) {
 
 
 export async function getServerSideProps() {
-  const res = await fetch('https://ecomm-backend2.herokuapp.com/api/blogs')
+  const res = await fetch('https://sore-cyan-twill.cyclic.app/api/blogs')
   const blogg = await res.json()
 
   return { props: { blogg } }

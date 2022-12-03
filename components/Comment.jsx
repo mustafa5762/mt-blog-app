@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import {BsHeart} from 'react-icons/bs'
 import {motion} from 'framer-motion'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../utils/firebase';
@@ -13,7 +12,7 @@ function Comment({id}) {
     const [user, loading] = useAuthState(auth);
 
     const fetchComments = async () => {
-        const res = await axios.get('https://ecomm-backend2.herokuapp.com/api/comments/' + id)
+        const res = await axios.get('https://sore-cyan-twill.cyclic.app/api/comments/' + id)
         setcomments(res.data)
     }
 
@@ -31,14 +30,14 @@ function Comment({id}) {
                 image: user.photoURL
             }
         }
-        const com = await axios.post('https://ecomm-backend2.herokuapp.com/api/comments', data)
+        const com = await axios.post('https://sore-cyan-twill.cyclic.app/api/comments', data)
         setcomments([...comments, com.data])
     }
     
     
   return (
     <div style={{display: 'flex', justifyContent: 'center'}}>
-            <motion.div initial={{x:800}} animate={{x:0}} transition={{duration:0.4,type:'spring',stiffness:50}} className="Comments">
+            <motion.div initial={{x:800}} animate={{x:0}} transition={{duration:1}} className="Comments">
                 { comments && <h2>Comments ({comments.length})</h2>}
                 <div className="post-comment">
                     {<div>

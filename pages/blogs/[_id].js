@@ -17,7 +17,7 @@ function Blog({blog}) {
       <div className={open && "blur"}>
       <Navbar/>
        <div className="Sidebar-Left">
-        <Icons openit={openit} id={blog._id}/>
+        <Icons likess={blog.likes} openit={openit} id={blog._id}/>
        </div>
       <Blogpost blog={blog}/>
       </div>
@@ -34,7 +34,7 @@ export async function getServerSideProps(context) {
   const {params} = context;
   const {_id} = params
   
-  const res = await fetch('https://ecomm-backend2.herokuapp.com/api/blog/' + _id)
+  const res = await fetch('https://sore-cyan-twill.cyclic.app/api/blog/' + _id)
   const blog = await res.json()
 
 

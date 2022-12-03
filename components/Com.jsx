@@ -6,6 +6,7 @@ function Com({comment,user}) {
 
     const [likes, setlikes] = useState(comment.likes)
     const [replies, setreplies] = useState(comment.replies)
+    const [reply2, setreply2] = useState(false)
 
     const Like = async (_id) => {
         if (user && user.email != null) {
@@ -15,7 +16,7 @@ function Com({comment,user}) {
                    user: user.email
                };
                setlikes([...likes, user.email])
-               await axios.post('https://ecomm-backend2.herokuapp.com/api/commentsl/', data)
+               await axios.post('https://sore-cyan-twill.cyclic.app/api/commentsl/', data)
            } catch (error) {
                console.log(error)
            }
@@ -33,7 +34,7 @@ function Com({comment,user}) {
                    user: user.email
                };
                setlikes(likes.filter((like) => like !== user.email ))
-               await axios.post('https://ecomm-backend2.herokuapp.com/api/commentsul/', data)
+               await axios.post('https://sore-cyan-twill.cyclic.app/api/commentsul/', data)
            } catch (error) {
                console.log(error)
            }
@@ -54,11 +55,12 @@ function Com({comment,user}) {
             }
         }
         setreplies([...replies, data])
-        const res = await axios.post('http://localhost:5000/api/reply', data)
+        const res = await axios.post('https://sore-cyan-twill.cyclic.app/api/reply', data)
         console.log(res)
     }
     
   return (
+    <>
         <div className='comment'>
             <div className="c-top">
                 <div className="c-img">
@@ -93,7 +95,7 @@ function Com({comment,user}) {
                         <span style={{marginLeft: 4}}>{likes.length}</span>
                     </div>
                     <div className="cb-icon">
-                        <span onClick={() => reply(comment._id)}>
+                        <span onClick={() => setreply2(!reply2)}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="whwh">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
                             </svg>
@@ -104,6 +106,26 @@ function Com({comment,user}) {
                 <div className="reply">Reply</div>
             </div>
         </div>
+        {   reply2 &&
+            comment.replies.map(
+                reply =>
+                <div className='replies'>
+                    <div className="c-top">
+                        <div className="c-img">
+                            <img referrerPolicy='noreferrer' src={reply.added_by.image} alt="" />
+                        </div>
+                        <div className="c-info">
+                            <div className="c-username">{reply.added_by.username}</div>
+                            <div className="c-date">28 Nov</div>
+                        </div>
+                    </div>
+                    <div className="c-mid">
+                        {reply.body}
+                    </div>
+                </div>
+            )
+        }
+    </>
   )
 }
 
