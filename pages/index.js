@@ -6,7 +6,6 @@ export default function Home({ blogg }) {
 
   return (
     <div>
-      <Login/>
       <Navbar/>
       {blogg.map(blog => <Link href={"/blogs/" + blog._id}>{blog.title}</Link>)}
     </div>

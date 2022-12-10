@@ -4,7 +4,7 @@ import { auth } from '../utils/firebase';
 import {FiSearch,FiChevronDown} from 'react-icons/fi'
 
 
-function Navbar() {
+function Navbar({setlog}) {
 
   const [user, loading] = useAuthState(auth);
 
@@ -20,20 +20,20 @@ function Navbar() {
             </div>
             {
               loading ?
-              <div className="username">LOading</div>
+              <div className="username">Loading</div>
               :
             <div>
               { !user &&
-              <div className="Button">Get Started</div>
+              <div onClick={() => setlog(true)} className="Button">Get Started</div>
               }
               {
                 user &&
                 <div className="user">
-                  <div className="Avatar">
+                  <div style={{marginRight: 7}} className="Avatar">
                     <img referrerPolicy="no-referrer" src={user.photoURL} alt="" />
                   </div>
-                  <div className="username">{user.displayName}</div>
                   <div className="Icon"><FiChevronDown/></div>
+                  
                 </div>
               }
             </div>
