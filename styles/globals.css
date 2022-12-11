@@ -8,10 +8,10 @@
 /* variables */
 
 :root {
-  --primary-text: #111827;
-  --secondary-text: #374151;
-  --icon-color: #4b5563;
-  --border: #d1d5db;
+  --primary-text: #fafafa;
+  --secondary-text: #e5e5e5;
+  --icon-color: #a1a1aa;
+  --border: #404040;
   --white: #ffffff;
   --primary: #4f46e5;
 }
@@ -98,7 +98,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-family: 'Sohne';
-  background-color: #f8fafc;
+  background-color: #171717;
   overflow-x: hidden;
 }
 .blur {
@@ -134,14 +134,14 @@ article pre {
   margin-bottom: 30px;
 }
 article p {
-  color: var(--primary-text);
+  color: var(--secondary-text);
+  font-family: 'Source Serif Pro';
   font-size: 20px;
   line-height: 32px;
   font-weight: 400;
   margin-top: 7px;
   margin-bottom: 35px;
   letter-spacing: -0.1px;
-  font-family: 'Source Serif Pro';
 }
 article iframe {
   width: 100%;
