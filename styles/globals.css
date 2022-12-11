@@ -1,6 +1,6 @@
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 
 
@@ -135,11 +135,12 @@ article pre {
 }
 article p {
   color: var(--primary-text);
-  font-size: 19px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 32px;
   font-weight: 400;
   margin-top: 7px;
   margin-bottom: 35px;
+  letter-spacing: -0.1px;
   font-family: 'Source Serif Pro';
 }
 article iframe {
@@ -513,6 +514,10 @@ article ol li {
     font-size: 27px;
     line-height: 32px;
   }
+  article h2 {
+  font-size: 24px;
+  line-height: 30px;
+}
   .Search-bar {
     display: none;
   }
