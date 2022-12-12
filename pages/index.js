@@ -1,13 +1,14 @@
-import Link from 'next/link'
+import Blog2 from '../components/Blog2'
 import Navbar from '../components/Navbar'
-import Login from '../components/Login'
 
 export default function Home({ blogg }) {
 
   return (
     <div>
       <Navbar/>
-      {blogg.map(blog => <Link href={"/blogs/" + blog._id}>{blog.title}</Link>)}
+      <div className="Home-Blogposts">
+        {blogg.map(blog => <Blog2 key={blog._id} blog={blog}/>)}
+      </div>
     </div>
   )
 }
