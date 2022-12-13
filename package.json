@@ -24,6 +24,7 @@
     "react-firebase-hooks": "^5.1.1",
     "react-highlight": "^0.15.0",
     "react-icons": "^4.6.0",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "use-state-persist": "^0.3.1"
   }
 }

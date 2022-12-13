@@ -20,7 +20,7 @@ function Blog({blog}) {
       <div className={open && "blur"}>
       <Navbar setlog={setlog}/>
        <div className="Sidebar-Left">
-        <Icons likess={blog.likes} openit={openit} id={blog._id}/>
+        <Icons likess={blog.likes} openit={openit} id={blog._id} blog={blog}/>
        </div>
       <Blogpost blog={blog}/>
       </div>
