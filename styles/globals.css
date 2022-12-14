@@ -16,6 +16,11 @@
   --primary: #4f46e5;
 }
 
+@font-face {
+  font-family: SSS;
+  src: url('blanco-regular.ttf');
+}
+
 
 /* font imports */
 
@@ -138,7 +143,7 @@ article pre {
 }
 article p {
   color: var(--secondary-text);
-  font-family: 'Source Serif Pro';
+  font-family: SSS;
   font-size: 20px;
   line-height: 32px;
   font-weight: 400;
@@ -386,8 +391,8 @@ article ol li {
   cursor: pointer;
 }
 .Avatar img {
-  width: 30px;
-  height: 30px;
+  width: 29px;
+  height: 29px;
   border-radius: 90%;
 }
 .Comments {
