@@ -16,17 +16,14 @@
   --primary: #4f46e5;
 }
 
-@font-face {
-  font-family: SSS;
-  src: url('blanco-regular.ttf');
-}
+
 
 
 /* font imports */
 
 @font-face {
   font-family: 'Sohne';
-  src: url('fonts/t/test-soehne-buch.woff2');
+  src: url('ff/GTWalsheimPro-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
@@ -143,7 +140,6 @@ article pre {
 }
 article p {
   color: var(--secondary-text);
-  font-family: SSS;
   font-size: 20px;
   line-height: 32px;
   font-weight: 400;

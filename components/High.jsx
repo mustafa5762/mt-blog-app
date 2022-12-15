@@ -1,12 +1,12 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 function High({children}) {
   return (
     <div>
         <pre>
-            <SyntaxHighlighter wrapLongLines={true} showLineNumbers={true} language="javascript" style={vscDarkPlus}>
+            <SyntaxHighlighter wrapLongLines={true} showLineNumbers={true} language="javascript" style={nightOwl}>
                 {children}
             </SyntaxHighlighter>
         </pre>
