@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 import Icons from '../../components/Icons'
 import Comment from '../../components/Comment';
 import Login from '../../components/Login'
+import Sidebar from '../../components/Sidebar'
 
 function Blog({blog}) {
 
@@ -18,10 +19,11 @@ function Blog({blog}) {
     <div>
       { log && <Login setlog={setlog}/> }
       <div className={open && "blur"}>
-      <Navbar setlog={setlog}/>
-       <div className="Sidebar-Left">
-        <Icons likess={blog.likes} openit={openit} id={blog._id} blog={blog}/>
-       </div>
+      <Sidebar/>
+      <div className='Sidebar-Left'>
+        <Icons likess={blog.likes} id={blog._id} blog={blog} openit={openit}/>
+      </div>
+      <Navbar setlog={setlog} />
       <Blogpost blog={blog}/>
       </div>
       { open && <Comment id={blog._id} open={open}/>}

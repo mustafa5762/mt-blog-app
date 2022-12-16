@@ -6,7 +6,7 @@ function High({children}) {
   return (
     <div>
         <pre>
-            <SyntaxHighlighter wrapLongLines={true} showLineNumbers={true} language="javascript" style={nightOwl}>
+            <SyntaxHighlighter wrapLongLines={true} showLineNumbers={true} language="jsx" style={nightOwl}>
                 {children}
             </SyntaxHighlighter>
         </pre>

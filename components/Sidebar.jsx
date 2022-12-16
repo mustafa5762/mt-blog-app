@@ -1,23 +1,16 @@
 import React from 'react'
-import Button from './Button'
-import {BiSearch} from 'react-icons/bi'
-import Spost from './Spost'
 
-function Sidebar({blogs}) {
+function Sidebar() {
   return (
     <div>
-        <div className="Sidebar-wrapper">
-          <div>
-            <Button>Get Started</Button>
-            <div className="Search-bar">
-              <div className="Search-icon">
-                <BiSearch size={20}/>
-              </div>
-              <input type="text" placeholder='Search' />
+        <div className="Sidebar">
+            <div className="Sidebar-Ad">
+                <div className="Sidebar-ad-pt">Get unlimited access to everything on Reader</div>
+                <div className="Sidebar-ad-st">Plans starting at less than 1$/week</div>
+                <div className='sbw'>
+                    <div className="Button">Get unlimited access</div>
+                </div>
             </div>
-            <div className="St">Trending Articles</div>
-            {blogs.map(blog => <Spost blog={blog}/>)}
-          </div>
         </div>
     </div>
   )
