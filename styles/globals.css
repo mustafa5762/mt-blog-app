@@ -102,6 +102,7 @@ body {
   font-family: 'Sohne';
   overflow-x: hidden;
   background-color: var(--white);
+  box-sizing: border-box;
 }
 .blur {
   opacity: 0.1;
@@ -302,12 +303,13 @@ article ol li {
 .Button {
   font-weight: 500;
   background-color: var(--primary-text);
-  padding: 12px 25px;
+  padding: 10px 20px;
   color: var(--white);
   letter-spacing: 0.4px;
   border-radius: 25px;
+  font-size: 15px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -616,10 +618,6 @@ article ol li {
   display: flex;
   margin-top: 20px;
 }
-.sbw .Button {
-  padding: 10px 20px;
-  font-size: 15px;
-}
 .Home-Search {
   margin-top: 5vh;
   padding: 0px 5vw;
@@ -631,6 +629,7 @@ article ol li {
 .sf-wrapper {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .Search-Filter {
   padding: 10px 20px;
@@ -714,10 +713,12 @@ article ol li {
   }
   .Sidebar-Left {
     width: 100%;
+    left: 0;
+    border-radius: 2px;
     background-color: #f8fafc;
     border-top: 1px solid var(--border);
-    height: 8vh;
-    top: 92vh;
+    height: 7vh;
+    top: 93vh;
     display: flex;
     justify-content: center;
   }
@@ -726,8 +727,8 @@ article ol li {
     justify-content: center;
   }
   .whwh {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
   .Home-Blogposts {
     grid-template-columns: repeat(1, 1fr);
@@ -735,6 +736,38 @@ article ol li {
   }
   .HB-img img {
     height: auto;
+  }
+  .Navbar {
+    height: 70px;
+  }
+  .Sidebar {
+    display: none;
+  }
+  .Home-Search {
+    margin-right: 0;
+    flex-wrap: wrap;
+  }
+  .Blogpost-wrapper {
+    margin-left: 0;
+    padding: 0px 5vw;
+  }
+  .Home-Heading {
+    margin-right: 0;
+    width: 100%;
+  }
+  .Home-Blogposts {
+    margin-right: 0;
+  }
+  .Avatar img {
+    width: 25px;
+    height: 25px;
+  }
+  .Navbar-Logo {
+    font-size: 20px;
+  }
+  .Navbar-Menu svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
