@@ -11,7 +11,6 @@ function Blog2({blog}) {
   
   return (
     <div className='Hb-wrapper'>
-        <Link href={"/blogs/" + blog._id}>
 
 
           {/* <div className="Hb-author">
@@ -25,26 +24,26 @@ function Blog2({blog}) {
   </div> */}
 
 
-          <div className="Hb-bottom">
-            <div className="Hb-info">
-              <div className="Hb-title">{blog.title}</div>
-              <div className="Hb-desc">
-                {blog.description.substring(0,200)}
+          <div className="pt-6 pb-2 items-center gap-x-8 border-b border-gray-300">
+            <Link href={"/blogs/" + blog._id}>
+              <img className='w-full h-48 object-cover object-center rounded-md' src={blog.image} alt="" />
+            </Link>
+            <div>
+            <Link href={"/blogs/" + blog._id}>
+              <div className="text-xl font-bold text-gray-900 mt-2.5">{blog.title}</div>
+            </Link>
+              <div className="text-gray-500 text-lg truncate">
+                {blog.short_description}
               </div>
-              <br />
-              <div style={{display:"flex"}}>
-                <div className="Button">Read More</div>
+              <div>
               </div>
+              <Icons likess={blog.likes} id={blog._id} blog={blog} comment={false}/>
             </div>
-            <div className="Hb-img">
-              <img src={blog.image} alt="" />
-            </div>
-
           </div>
 
 
           
-        </Link>
+        
     </div>
   )
 }
