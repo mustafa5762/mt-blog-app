@@ -91,12 +91,10 @@ body {
   font-family: 'Sohne';
   overflow-x: hidden;
   box-sizing: border-box;
+  background-color: #f1f1f1;
 }
 
-p {
-  font-family: 'Source Serif Pro';
-}
 
-.mrr {
-  margin-right: 25%;
-}
+
+
+

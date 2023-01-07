@@ -19,12 +19,11 @@ function Blog({blog}) {
     <div>
       { log && <Login setlog={setlog}/> }
       <div className={open && "blur"}>
-      <Sidebar/>
       <div style={{bottom:15,left:'33%'}} className='fixed bg-gray-100 border border-gray-300 flex justify-center shadow-2xl rounded-full'>
-        <Icons likess={blog.likes} id={blog._id} blog={blog} openit={openit} comment={true}/>
+        
       </div>
       <Navbar setlog={setlog} />
-      <Blogpost blog={blog}/>
+      <Blogpost openit={openit} blog={blog}/>
       </div>
       { open && <Comment id={blog._id} open={open}/>}
     </div>
