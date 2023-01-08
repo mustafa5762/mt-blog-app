@@ -36,18 +36,18 @@ function Comment({id}) {
     
     
   return (
-    <div style={{display: 'flex', justifyContent: 'center'}}>
-            <motion.div initial={{x:800}} animate={{x:0}} transition={{duration:1}} className="Comments">
-                { comments && <h2>Comments ({comments.length})</h2>}
-                <div className="post-comment">
+    <div>
+            <motion.div initial={{x:800}} animate={{x:0}} transition={{duration:1}} style={{width:'520px'}} className="fixed overflow-y-scroll top-0 right-0 min-h-screen bg-white border border-gray-300 p-8">
+                { comments && <h2 className='font-bold text-slate-900 text-2xl'>Responses ({comments.length})</h2>}
+                <div className="p-4 border border-slate-300 mt-6 rounded-lg">
                     {<div>
-                    <div className="wc-mid">
-                        <textarea onChange={(e) => setinput(e.target.value)} placeholder='Write a Comment' rows="3"></textarea>
+                    <div className="">
+                        <textarea className='w-full focus:outline-none text-slate-700' onChange={(e) => setinput(e.target.value)} placeholder='Write a Comment' rows="3"></textarea>
                     </div>
                     </div>}
-                    <div className="wc-bottom">
-                        <div onClick={postComment} className="wc-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="whwh">
+                    <div className="flex items-center justify-end">
+                        <div onClick={postComment} className="text-lime-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                             </svg>
                         </div>

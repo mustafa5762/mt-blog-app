@@ -23,7 +23,7 @@ function Blogpost({blog,openit}) {
       </div>
         <img className='mt-6 w-full rounded-md' src="https://ncmaz.chisnghiax.com/wp-content/uploads/2021/09/pexels-photo-3800412-1.jpeg" alt="" />
         <br /><br />
-          <Markdown className="prose prose-lg lg:prose-xl prose-slate prose-pre:p-0 prose-pre:m-0 prose-headings:mb-5" options={{ wrapper: 'article' , overrides: {code: {component: High}} }}>
+          <Markdown className="prose prose-md lg:prose-xl prose-slate prose-pre:p-0 prose-pre:m-0 prose-headings:mb-5" options={{ wrapper: 'article' , overrides: {code: {component: High}} }}>
             {blog.description}
           </Markdown>
           <div className="Divider"></div>
