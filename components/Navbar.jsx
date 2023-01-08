@@ -12,13 +12,13 @@ function Navbar({setlog}) {
     <div>
         <div className="flex justify-between items-center h-20 px-5 lg:px-32 border-b border-gray-300">
           <div className="text-2xl font-black text-gray-900">READER</div>
-          <div className="flex items-center gap-x-8">
-            <div className="text-gray-500 font-semibold tracking-wider">Home</div>
-            <div className="text-gray-500 font-semibold tracking-wider">About</div>
-            <div className="text-gray-500 font-semibold tracking-wider">Lifestyle</div>
-            <div className="text-gray-500 font-semibold tracking-wider">Shopping</div>
-            <div className="text-gray-500 font-semibold tracking-wider">Tutorials</div>
-            <div className="text-gray-500 font-semibold tracking-wider">Templates</div>
+          <div className="hidden lg:flex items-center gap-x-8">
+            <div className="text-gray-500 font-semibold tracking-wide">Home</div>
+            <div className="text-gray-500 font-semibold tracking-wide">About</div>
+            <div className="text-gray-500 font-semibold tracking-wide">Lifestyle</div>
+            <div className="text-gray-500 font-semibold tracking-wide">Shopping</div>
+            <div className="text-gray-500 font-semibold tracking-wide">Tutorials</div>
+            <div className="text-gray-500 font-semibold tracking-wide">Templates</div>
           </div>
           { user &&  <div className='flex gap-6 items-center'>
             <div className="text-gray-600">
