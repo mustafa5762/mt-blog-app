@@ -14,12 +14,12 @@ function Navbar({setlog}) {
         <div className="flex justify-betwee items-center h-20 px-5 lg:px-32 border-b border-gray-300">
           <div className="text-xl lg:text-2xl font-black text-gray-900">READER</div>
           <div className="hidden lg:flex items-center gap-x-8 ml-16">
-            <div className="text-gray-600 font-semibold tracking-wide">Home</div>
-            <div className="text-gray-600 font-semibold tracking-wide">About</div>
-            <div className="text-gray-600 font-semibold tracking-wide">Lifestyle</div>
-            <div className="text-gray-600 font-semibold tracking-wide">Shopping</div>
-            <div className="text-gray-600 font-semibold tracking-wide">Tutorials</div>
-            <div className="text-gray-600 font-semibold tracking-wide">Templates</div>
+            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Home</div>
+            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">About</div>
+            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Lifestyle</div>
+            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Shopping</div>
+            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Tutorials</div>
+            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Templates</div>
           </div>
           { user &&  <div className='flex gap-6 items-center ml-auto'>
             <div className="text-gray-600">
