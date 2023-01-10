@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import Blogpost from '../../components/Blogpost';
 import Navbar from '../../components/Navbar';
-import Icons from '../../components/Icons'
 import Comment from '../../components/Comment';
 import Login from '../../components/Login'
-import Sidebar from '../../components/Sidebar'
+import { AnimatePresence } from 'framer-motion';
 
 function Blog({blog}) {
 
@@ -17,15 +16,17 @@ function Blog({blog}) {
 
   return (
     <div>
-      { log && <Login setlog={setlog}/> }
-      <div className={open && "blur"}>
+      <AnimatePresence>
+        { log && <Login setlog={setlog}/> }
+      </AnimatePresence>
       <div style={{bottom:15,left:'33%'}} className='fixed bg-gray-100 border border-gray-300 flex justify-center shadow-2xl rounded-full'>
         
       </div>
       <Navbar setlog={setlog} />
       <Blogpost openit={openit} blog={blog}/>
-      </div>
-      { open && <Comment id={blog._id} open={open}/>}
+      <AnimatePresence>
+        { open && <Comment id={blog._id} open={open}/>}
+      </AnimatePresence>
     </div>
   )
 }

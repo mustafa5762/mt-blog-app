@@ -37,7 +37,7 @@ function Comment({id}) {
     
   return (
     <div>
-            <motion.div initial={{x:800}} animate={{x:0}} transition={{duration:1}} style={{width:'520px'}} className="fixed overflow-y-scroll top-0 right-0 min-h-screen bg-white border border-gray-300 p-8">
+            <motion.div initial={{x:800}} animate={{x:0}} transition={{duration:0.5}} exit={{x:800}} style={{width:'520px'}} className="absolute overflow-y-scroll top-0 right-0 min-h-screen bg-white border border-gray-300 p-8">
                 { comments && <h2 className='font-bold text-slate-900 text-2xl'>Responses ({comments.length})</h2>}
                 <div className="p-4 border border-slate-300 mt-6 rounded-lg">
                     {<div>

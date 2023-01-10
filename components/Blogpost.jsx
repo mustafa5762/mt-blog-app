@@ -16,7 +16,7 @@ function Blogpost({blog,openit}) {
         <div className="bg-amber-50 text-amber-700 px-2 py-1 text-sm cursor-pointer hover:bg-amber-100 transition rounded-xl">Lifestyle</div>
         <div className="bg-green-50 text-green-700 px-2 py-1 text-sm cursor-pointer hover:bg-green-100 transition rounded-xl">Shopping</div>
       </div>
-      <h1 className="font-extrabold text-3xl lg:text-4xl text-slate-800">Custom Cursor in Next.js (Cuberto Cursor)</h1>
+      <h1 className="font-extrabold text-3xl lg:text-4xl text-slate-800">The Correct Way to Fetch Api in React.js</h1>
       <div className="text-lg lg:leading-normal lg:text-2xl text-slate-600 mt-2">{blog.short_description}</div>
       <div className="flex justify-end mt-2">
         <Icons likess={blog.likes} id={blog._id} blog={blog} openit={openit} comment={true}/>
