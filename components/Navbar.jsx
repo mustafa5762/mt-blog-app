@@ -10,16 +10,16 @@ function Navbar({setlog}) {
 
   return (
     <div>
-      <div className="h-10 w-full bg-lime-600 text-white font-medium text-sm flex items-center justify-center">Get Started With Our Blog To Approve Adsense</div>
-        <div className="flex justify-betwee items-center h-20 px-5 lg:px-32 border-b border-gray-300">
-          <div className="text-xl lg:text-2xl font-black text-gray-900">READER</div>
-          <div className="hidden lg:flex items-center gap-x-8 ml-16">
-            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Home</div>
-            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">About</div>
-            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Lifestyle</div>
-            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Shopping</div>
-            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Tutorials</div>
-            <div className="text-gray-600 font-semibold tracking-wide cursor-pointer hover:text-lime-600 transition">Templates</div>
+      <div className="hidden h-10 w-full bg-lime-600 text-white font-medium text-sm flex items-center justify-center">Get Started With Our Blog To Approve Adsense</div>
+        <div className="flex justify-betwee items-center h-20 px-5 lg:px-32 border-b border-gray-300 z-50 bg-white">
+          <div className="text-xl lg:text-2xl font-black text-gray-800">READER</div>
+          <div className="hidden lg:flex items-center gap-x-8 ml-16 mt-1">
+            <div className="text-gray-500 font-medium tracking-wide cursor-pointer hover:text-lime-600 transition">Home</div>
+            <div className="text-gray-500 font-medium tracking-wide cursor-pointer hover:text-lime-600 transition">About</div>
+            <div className="text-gray-500 font-medium tracking-wide cursor-pointer hover:text-lime-600 transition">Lifestyle</div>
+            <div className="text-gray-500 font-medium tracking-wide cursor-pointer hover:text-lime-600 transition">Shopping</div>
+            <div className="text-gray-500 font-medium tracking-wide cursor-pointer hover:text-lime-600 transition">Tutorials</div>
+            <div className="text-gray-500 font-medium tracking-wide cursor-pointer hover:text-lime-600 transition">Templates</div>
           </div>
           { user &&  <div className='flex gap-6 items-center ml-auto'>
             <div className="text-gray-600">

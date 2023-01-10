@@ -116,7 +116,7 @@ function Com({comment,user}) {
                             <img referrerPolicy='noreferrer' className='w-8 h-8 rounded-full' src={reply.added_by.image} alt="" />
                         </div>
                         <div className="ml-2">
-                            <div className="text-base text-slate-900">{reply.added_by.username}</div>
+                            <div className="text-base text-slate-800">{reply.added_by.username}</div>
                             <div className="text-sm text-slate-500">28 Nov</div>
                         </div>
                     </div>
